@@ -50,6 +50,7 @@ function observador() {
           var uid = user.uid;
           var providerData = user.providerData;
           console.log("existe usuario logueado.")
+          console.log("Usuario verificado:", emailVerified);
           muestraContenido(email);
         } else {
           // User is signed out.

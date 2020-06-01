@@ -63,7 +63,16 @@ observador();
 function muestraContenido(user){
     if (user.emailVerified) {
         var contenido= document.getElementById('contenido');
-        contenido.innerHTML = `<p>Bienvenido</p><br/><button onclick="cerrar()" class="btn btn-danger btn-sm">Cerrar sesión</button>`;
+        contenido.innerHTML = `
+            <div class="container mt-3">
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading">Bienvenido! ${user.email}</h4>
+                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                    <hr>
+                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                </div>
+                <button onclick="cerrar()" class="btn btn-danger btn-sm">Cerrar sesión</button>
+            </div>`;
     }
 }
 

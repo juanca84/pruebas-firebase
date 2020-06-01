@@ -51,7 +51,7 @@ function observador() {
           var providerData = user.providerData;
           console.log("existe usuario logueado.")
           console.log("Usuario verificado:", emailVerified);
-          muestraContenido(email);
+          muestraContenido(user);
         } else {
           // User is signed out.
           console.log("no existe usuario.")
@@ -60,9 +60,11 @@ function observador() {
 }
 observador();
 
-function muestraContenido(email){
-    var contenido= document.getElementById('contenido');
-    contenido.innerHTML = `<p>Bienvenido</p><br/><button onclick="cerrar()" class="btn btn-danger btn-sm">Cerrar sesión</button>`;
+function muestraContenido(user){
+    if (user.emailVerified) {
+        var contenido= document.getElementById('contenido');
+        contenido.innerHTML = `<p>Bienvenido</p><br/><button onclick="cerrar()" class="btn btn-danger btn-sm">Cerrar sesión</button>`;
+    }
 }
 
 function cerrar(){

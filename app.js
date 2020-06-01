@@ -6,7 +6,7 @@ function registrar() {
     firebase.auth()
             .createUserWithEmailAndPassword(email, contrasena)
             .then(response=>{
-                verificar()
+                verificar();
                 console.log(response);
             })
             .catch(function(error) {
@@ -93,6 +93,7 @@ function verificar(){
     var user = firebase.auth().currentUser;
     user.sendEmailVerification().then(function() {
         console.log("enviando correo")
+        $("#exampleModal").modal('hide');
     }).catch(function(error) {
         console.log("error")
     });

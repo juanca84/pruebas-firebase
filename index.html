@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-analytics.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAPec4FI2et1gXYOqpDPmmvi15hVDARDNk",
+            authDomain: "usuarios-2edc5.firebaseapp.com",
+            databaseURL: "https://usuarios-2edc5.firebaseio.com",
+            projectId: "usuarios-2edc5",
+            storageBucket: "usuarios-2edc5.appspot.com",
+            messagingSenderId: "1035074062812",
+            appId: "1:1035074062812:web:6ec307d5b12b05035f2719",
+            measurementId: "G-5ZHV5TP1GE"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="wrapper">
+                <h2 class="text-center">Registro</h2>
+                <input class="form-control my-2" id="email" type="email" placeholder="ingrese email">
+                <input class="form-control my-2" id="contrasena" type="password" placeholder="ingrese password">
+                <button class="btn btn-success float-right" onclick="registrar()">Registrar</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-center">
+            <div class="wrapper">
+                <h2 class="text-center">Login</h2>
+                <input class="form-control my-2" id="email2" type="email" placeholder="ingrese email">
+                <input class="form-control my-2" id="contrasena2" type="password" placeholder="ingrese password">
+                <button class="btn btn-primary float-right" onclick="ingresar()">Ingresar</button>
+            </div>
+        </div>
+        <br>
+        <div id="contenido" class="row justify-content-center">
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

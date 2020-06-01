@@ -19,9 +19,9 @@ function registrar() {
 }
 
 function ingresar() {
-    var email = document.getElementById('email2').value;   
+    var email = document.getElementById('email2').value;  
     var contrasena = document.getElementById('contrasena2').value;
-    
+    console.log(email);
     // ingreso de usuarios
     firebase.auth()
         .signInWithEmailAndPassword(email, contrasena)
